@@ -1,0 +1,5 @@
+const char* ssid     = "PRINT808";  //Insira o SSID da rede
+const char* password = "PRiNt3RbLO8"; //Insira a senha da rede
+
+const char* ssid     = "CLARO_EA355B";  //Insira o SSID da rede
+const char* password = "yntRVKVxJh"; //Insira a senha da rede
