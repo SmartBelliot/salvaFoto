@@ -6,8 +6,8 @@
 
 #include "esp_camera.h"
 
-const char* ssid     = "PRINT808";  //Insira o SSID da rede
-const char* password = "PRiNt3RbLO8"; //Insira a senha da rede
+const char* ssid     = "CLARO_EA355B";  //Insira o SSID da rede
+const char* password = "yntRVKVxJh"; //Insira a senha da rede
 
 //https://script.google.com/macros/s/AKfycbx6k5xYW-CE9GFyLD05l6yKywPXURlAYqUImcVM2zDVWRUkIfBgSrDDk7-gs0KfM1RjAQ/exec
 
@@ -61,7 +61,7 @@ void setup()
   }
 
   pinMode(flash,OUTPUT);
-  pinMode(botao,INPUT_PULLUP);
+  pinMode(botao,INPUT_PULLDOWN);
 
   Serial.println("");
   Serial.println("STAIP address: ");
@@ -107,7 +107,7 @@ boolean enviar = true;
 void loop() {
 boolean leitura_botao=digitalRead(botao);
 Serial.println(leitura_botao);
-  if(leitura_botao == LOW) {
+  if(leitura_botao == HIGH) {
     // se o botão pressionado
     saveCapturedImage();
     enviar = false;
