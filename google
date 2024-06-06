@@ -1,0 +1,26 @@
+function doPost(e) {
+   
+  var imagem = Utilities.base64Decode(e.parameters.data);//Decofica a imagem
+   
+  var nome_do_Arquivo = Utilities.formatDate(new Date(), "GMT-3", "dd/MM/yyyy-HH:mm:ss")+".jpg"; //Define nome da imagem com a data e o horário
+   
+  var salvar_imagem = Utilities.newBlob(imagem, e.parameters.mimetype, nome_do_Arquivo); 
+ 
+  var pasta, pastas = DriveApp.getFoldersByName("ESP32-CAM"); //Verifica se a pasta já existe
+   
+  if (pastas.hasNext()) {
+    
+    pasta = pastas.next();
+   
+  } 
+  else {
+     
+    pasta = DriveApp.createFolder("ESP32-CAM");  //Cria a pasta
+   
+  }
+   
+  var Arquivar = pasta.createFile(salvar_imagem); //Salva o arquivo na pasta
+   
+  return ContentService.createTextOutput('Completo')
+ 
+}
