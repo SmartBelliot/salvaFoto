@@ -12,7 +12,7 @@ const char* password = "yntRVKVxJh"; //Insira a senha da rede
 //https://script.google.com/macros/s/AKfycbx6k5xYW-CE9GFyLD05l6yKywPXURlAYqUImcVM2zDVWRUkIfBgSrDDk7-gs0KfM1RjAQ/exec
 
 const char* myDomain = "script.google.com";
-String myScript = "/macros/s/AKfycbx6k5xYW-CE9GFyLD05l6yKywPXURlAYqUImcVM2zDVWRUkIfBgSrDDk7-gs0KfM1RjAQ/exec";    //Replace with your own url
+String myScript = "/macros/s/AKfycbxlC0PYyAgEPz5KqI1ZAmMQbAT4Qn_KJQcKy0GzFcNbWokgPrtmnF0yyRhtIgxdu0Ix/exec";    //Replace with your own url
 
 String myFilename = "filename=ESP32-CAM.jpg";
 String mimeType = "&mimetype=image/jpeg";
