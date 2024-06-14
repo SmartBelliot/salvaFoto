@@ -4,5 +4,9 @@ const char* password = "PRiNt3RbLO8"; //Insira a senha da rede
 const char* ssid     = "CLARO_EA355B";  //Insira o SSID da rede
 const char* password = "yntRVKVxJh"; //Insira a senha da rede
 
+const char* ssid     = "ws_iot";  //Insira o SSID da rede
+const char* password = "Us0C0nc1enT3"; //Insira a senha da rede
+
+
 //1c36a4fcfc1c1a8 - imgur
 //756cc8417d437168bc7231e6901ca45b4380d3b5
