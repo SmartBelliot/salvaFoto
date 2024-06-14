@@ -7,6 +7,7 @@ const char* password = "yntRVKVxJh"; //Insira a senha da rede
 const char* ssid     = "ws_iot";  //Insira o SSID da rede
 const char* password = "Us0C0nc1enT3"; //Insira a senha da rede
 
+//https://cloud.tembo.io/orgs/org_2hsQvCksBlqQLaE2WWQj5sXChh2/clusters/inst_1718380589182_EwemBD_0/home - tambo.io - site do banco de dados
 
 //1c36a4fcfc1c1a8 - imgur
 //756cc8417d437168bc7231e6901ca45b4380d3b5
