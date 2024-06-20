@@ -6,8 +6,8 @@
 
 #include "esp_camera.h"
 
-const char* ssid     = "CLARO_EA355B";  //Insira o SSID da rede
-const char* password = "yntRVKVxJh"; //Insira a senha da rede
+const char* ssid     = "ws_iot";  //Insira o SSID da rede
+const char* password = "Us0C0nc1enT3"; //Insira a senha da rede
 
 //https://script.google.com/macros/s/AKfycbx6k5xYW-CE9GFyLD05l6yKywPXURlAYqUImcVM2zDVWRUkIfBgSrDDk7-gs0KfM1RjAQ/exec
 
@@ -106,7 +106,6 @@ boolean enviar = true;
 
 void loop() {
 boolean leitura_botao=digitalRead(botao);
-Serial.println(leitura_botao);
   if(leitura_botao == HIGH) {
     // se o botão pressionado
     saveCapturedImage();
