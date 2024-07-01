@@ -9,8 +9,6 @@
 const char* ssid     = "Manga";  //Insira o SSID da rede
 const char* password = "chocolate"; //Insira a senha da rede
 
-//https://script.google.com/macros/s/AKfycbx6k5xYW-CE9GFyLD05l6yKywPXURlAYqUImcVM2zDVWRUkIfBgSrDDk7-gs0KfM1RjAQ/exec
-
 const char* myDomain = "smartbell-l5ft8dgm.b4a.run";
 String myScript = "/smartbell.php";    //Replace with your own url
 
@@ -18,7 +16,7 @@ String myFilename = "filename=ESP32-CAM.jpg";
 String mimeType = "&mimetype=image/jpeg";
 String myImage = "&data=";
 
-int waitingTime = 30000; //Wait 30 seconds to google response.
+int waitingTime = 30000;
 
 #define PWDN_GPIO_NUM     32
 #define RESET_GPIO_NUM    -1
@@ -55,7 +53,6 @@ void setup()
   Serial.println(ssid);
   WiFi.begin(ssid, password);
     
-
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
     delay(500);
@@ -116,14 +113,14 @@ void loop() {
     enviar = false;
     Serial.println("entrou");
     leitura_botao=!leitura_botao;
-    digitalWrite(led,LOW);//Define ledPin como HIGH, ligando o LED
-    delay(500);//Intervalo de 100 milissegundos
-    digitalWrite(led,HIGH);//Define ledPin como LOW, desligando o LED
-    delay(1000);
+    digitalWrite(led,LOW);//Define led como LOW, desligando o LED
+    delay(500);//Intervalo de 500 milissegundos
+    digitalWrite(led,HIGH);//Define led como HIGH, ligando o LED
+    delay(1000);//Intervalo de 1000 milissegundos
     digitalWrite(led,LOW);//Define ledPin como LOW, desligando o LED
   }
   else{
-    digitalWrite(led, HIGH);//Define ledPin como LOW, desligando o LED
+    digitalWrite(led, HIGH);//Define ledPin como HIGH, deixando ele ligado o tempo todo
   }
 
 }
@@ -186,7 +183,6 @@ void saveCapturedImage() {
       if ((StartTime+waitingTime) < millis()) {
         Serial.println();
         Serial.println("No response.");
-        //If you have no response, maybe need a greater value of waitingTime
         break;
       }
     }
@@ -200,7 +196,6 @@ void saveCapturedImage() {
   client.stop();
 }
 
-//https://github.com/zenmanenergy/ESP8266-Arduino-Examples/
 String urlencode(String str)
 {
     String encodedString="";
@@ -228,7 +223,6 @@ String urlencode(String str)
         encodedString+='%';
         encodedString+=code0;
         encodedString+=code1;
-        //encodedString+=code2;
       }
       yield();
     }
